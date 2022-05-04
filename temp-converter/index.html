@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="bigBackground">
+      <header>
+        <h1>Converter</h1>
+      </header>
+
+      <div class="flex-container" id="container">
+        <div>Enter value in Fahrenheit field to convert to Celsius:</div>
+        <br />
+
+        <input
+          id="inputFahrenheit"
+          type="number"
+          placeholder="Fahrenheit Input"
+          oninput="temperatureConverter(this.value)"
+          onchange="temperatureConverter(this.value)"
+        /><br />
+
+        <!-- <p>Celsius: <span id="outputCelsius"></span></p> -->
+
+        <div class="circle" id="outputCelsius">1</div>
+      </div>
+    </main>
+
+    <script>
+      function temperatureConverter(valNum) {
+        // valNum = parseFloat(valNum);
+        const element = document.getElementById("outputCelsius");
+        element.innerHTML = (valNum - 32) / (1.8).toFixed(0);
+        backGroundColor(valNum, element);
+      }
+
+      function backGroundColor(valNum, element) {
+        const int = parseInt(valNum);
+        // var element = document.getElementById("outputCelsius");
+        // console.log(element.style.backgroundColor)
+
+        switch (true) {
+          case int >= 90:
+            element.style.background = "red";
+            break;
+          case int >= 85 && int < 90:
+            element.style.backgroundColor = "orange";
+            break;
+          case int >= 71 && int < 85:
+            element.style.backgroundColor = "yellow";
+            break;
+          case int >= 55 && int < 71:
+            element.style.backgroundColor = "green";
+            break;
+          case int >= 40 && int < 55:
+            element.style.backgroundColor = "blue";
+            break;
+          case int < 40:
+            element.style.backgroundColor = "white";
+            break;
+          default:
+            element.style.backgroundColor = "black";
+        }
+      }
+    </script>
+  </body>
+</html>
