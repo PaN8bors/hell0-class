@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'new_walt_disney_uiregular';
+  src: url('./font/newwaltdisneyui-8yda.woff2') format('woff2'),
+        url('./font/newwaltdisneyui-8yda.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  background-color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: new_walt_disney_uiregular;
+}
+
+header {
+  text-align: center;
+  border: 1px black solid;
+  width: 450px;
+}
+
+h1, h2 {
+  color: gold;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 450px;
+  height: auto;
+}
+
+.picture {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.yoursHouse {
+  display: flex;
+  margin-top: 5px;
+  width: 200px;
+  justify-content: space-evenly;
+  color: white;
+  font-size:  24px;;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 450px;
+  height: auto;
+}
+
+.r1, .r2 {
+  display: flex;
+  width: 200px;
+  height: 60px;
+  border: 1px black solid;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: red;
+  border-radius: 15px;
+  box-shadow:  -8px -8px 20px  inset;
+}
+
+.buttons {
+  display: flex;
+  align-items:  center;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.button {
+  height: 50px;
+  width: 100px;
+  font-family: new_walt_disney_uiregular;
+  font-size:  18px;
+  border-radius: 15px;
+  box-shadow:  -7px -7px 15px black inset;
+}
+
+.reset {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+.resetButton {
+  height: 50px;
+  width: 100px;
+  background-color: red;
+  font-family: new_walt_disney_uiregular;
+  color: gold;
+  font-size: 18px;
+  border-radius: 15px;
+  box-shadow:  -7px -7px 20px black  inset;
+}
+
